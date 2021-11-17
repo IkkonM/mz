@@ -22,9 +22,14 @@ cout<<endl;
 
 if(a == 0){
 	
-	cout<< "a nie moze byz rowne 0"<<endl;
+	if(b == 0){
+		cout<< "Funkcja ma nieskonczone miejsca zerowe"<<endl;
+	} else {
+		cout<< "Funkcja nie ma miejsc zerowych"<<endl;
 	
-} else{
+	
+} }
+else{
 	x0 = mz(a,b);
 	cout<<"Miejsce zerowe jest rowne = "<< x0<<endl;
 }
