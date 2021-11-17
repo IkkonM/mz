@@ -39,11 +39,27 @@ float fun_c(int a, int b, int c, float*x1, float*x2){
 
 }
 
+float fun_d(int a, int p, int q, float*x1, float*x2){
+
+		int x = -(q/a);
+		if(x > 0){
+		*x1 = p + sqrt (x);
+		*x2 = p - sqrt (x);
+		return 2;
+		} else {
+			
+		return 0;
+		} 
+		
+
+
+}
+
 int main(){
 
 int x;
 cout<<"Wybierz ktora funkcje chcesz obliczyc:"<<endl;
-cout<<"1. ax + b"<<endl<<"2. ax + by + c = 0 "<<endl<<"3. ax2 + by + c = 0 "<<endl;
+cout<<"1. ax + b"<<endl<<"2. ax + by + c = 0 "<<endl<<"3. ax2 + by + c = 0 "<<endl<<"4. y=a(x-p)2+q "<<endl;;
 cin>>x;
 
 
@@ -109,6 +125,27 @@ cout<<endl;
 		cout<<"Brak miejsc zerowych";
 	}	
 	}
+
+} else if(x == 4){
+	cout<<"Podaj a:";
+	cin>>a;
+	cout<<"Podaj p:";
+	cin>>b;
+	cout<<"Podaj q:";
+	cin>>c;
+	cout<<endl;	
+	
+	int iloscmz=fun_d(a,b,c,&x1,&x2);
+	
+	if(iloscmz == 0){
+		cout<<"Brak miejsc zerowych";
+	}else{
+		cout<<"x1 = "<< x1<<endl;
+		cout<<"x2 = "<< x2;	
+	}
+
+	
+	
 
 }
 
