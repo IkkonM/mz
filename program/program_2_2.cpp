@@ -91,7 +91,11 @@ cout<<endl;
 	cout<<endl;	
 	
 	if(a == 0){
-		cout<<"a nie moze byc rowne 0";
+		
+		x0 = fun_a(b,c);
+		cout<<"Miejsce zerowe jest rowne = "<< x0<<endl;
+		
+		
 	} else{
 		int iloscmz; 
 		iloscmz=fun_c(a,b,c,&x1,&x2);
